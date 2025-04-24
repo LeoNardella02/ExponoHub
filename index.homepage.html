@@ -9,27 +9,28 @@
 
   <style>
     body {
-      background-color: #80a5ca;
+      background-color: #9dbcdb;
       margin: 0;
     }
 
+  
     .navbar {
-      position: sticky;
+      position: relative;
       top: 0;
-      z-index: 333;
+      z-index: 000;
     }
 
     .post-feed {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 30px 15px;
+      max-width:1000PX;
+      margin:auto;
+      padding: 50px 35px;
     }
 
     .post-card {
       background-color: #80a5ca;
       border-radius: 10%;
       padding: 30px;
-      box-shadow: 0 0 0 rgba(0,0,0,0.1);
+      box-shadow: 0 0 0 rgba(193, 85, 85, 0.1);
       margin-bottom: 30px;
     }
 
@@ -40,8 +41,9 @@
     }
 
     .username {
+      image-rendering: auto;
       font-weight: bold;
-      color: #eef0f2;
+      color: #080808;
       cursor: pointer;
     }
 
@@ -65,22 +67,34 @@
       <div class="d-flex nav-center gap-4">
         <a class="nav-link" href="#">Homepage</a>
         <a class="nav-link" href="#">Messaggi</a>
-        <a class="nav-link" href="#">post</a>
-        <a class="nav-link" href="#">notifiche</a>
+        <a class="nav-link" href="#">Post</a>
+        <a class="nav-link" href="#">Notifiche</a>
+        <a class="nav-link" href="#">+</a>
+        <div class="dropdown">
+          <button class="btn btn-link nav-link dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+            Account
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <li><a class="dropdown-item" href="#">Profilo</a></li>
+            <li><a class="dropdown-item" href="#">Impostazioni</a></li>
+            <li><a class="dropdown-item" href="#">Logout</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </nav>
+
 
 
   <div class="post-feed">
 
     <div class="post-card">
       <div class="mb-2">
-        <a href="#" class="username">Utente1</a>
+        <class="username">Mario Rossi</a>
       </div>
       <div class="row">
         <div class="col-md-5">
-          <img src="https://via.placeholder.com/400x300" alt="Foto del post" class="post-image">
+          <img src="c:\Users\Utente\Desktop\IMMAGINE1.webp" alt="Foto del post" class="post-image">
         </div>
         <div class="col-md-7">
           <p>Descrizione del post 1. Questo è un esempio di descrizione per un contenuto multimediale postato su ExponHub.</p>
@@ -95,11 +109,11 @@
   
     <div class="post-card">
       <div class="mb-2">
-        <a href="#" class="username">Utente2</a>
+        <a href="#" class="username">Luca Rossi</a>
       </div>
       <div class="row">
         <div class="col-md-5">
-          <img src="https://via.placeholder.com/400x300/aaaaaa/ffffff" alt="Foto del post" class="post-image">
+          <img src="c:\Users\Utente\AppData\Local\Temp\donna-che-piange-1937-Tate-Moden-Londra.webp" alt="Foto del post" class="post-image">
         </div>
         <div class="col-md-7">
           <p>Descrizione del post 2. Altri contenuti pubblicati da utenti della piattaforma.</p>
