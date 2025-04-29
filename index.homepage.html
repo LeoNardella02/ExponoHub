@@ -6,91 +6,65 @@
   <title>ExponHub</title>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-  <style>
-    body {
-      background-color: #9dbcdb;
-      margin: 0;
-    }
-
-  
-    .navbar {
-      position: relative;
-      top: 0;
-      z-index: 000;
-    }
-
-    .post-feed {
-      max-width:1000PX;
-      margin:auto;
-      padding: 50px 35px;
-    }
-
-    .post-card {
-      background-color: #80a5ca;
-      border-radius: 10%;
-      padding: 30px;
-      box-shadow: 0 0 0 rgba(193, 85, 85, 0.1);
-      margin-bottom: 30px;
-    }
-
-    .post-image {
-      width: 100%;
-      height: auto;
-      border-radius: 20px;
-    }
-
-    .username {
-      image-rendering: auto;
-      font-weight: bold;
-      color: #080808;
-      cursor: pointer;
-    }
-
-    .nav-center {
-      margin: auto;
-    }
-
-    @media (max-width: 768px) {
-      .nav-center {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-  </style>
+  <link rel="stylesheet"  href="stile.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
 
+
+  <!-- NAVBAR ORDINATA -->
   <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm px-4">
-    <div class="container justify-content-between">
-      <a class="navbar-brand fw-bold" href="#">ExponHub</a>
-      <div class="d-flex nav-center gap-4">
-        <a class="nav-link" href="#">Homepage</a>
-        <a class="nav-link" href="#">Messaggi</a>
-        <a class="nav-link" href="#">Post</a>
-        <a class="nav-link" href="#">Notifiche</a>
-        <a class="nav-link" href="#">+</a>
-        <div class="dropdown">
-          <button class="btn btn-link nav-link dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-            Account
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <li><a class="dropdown-item" href="#">Profilo</a></li>
-            <li><a class="dropdown-item" href="#">Impostazioni</a></li>
-            <li><a class="dropdown-item" href="#">Logout</a></li>
-          </ul>
+    <div class="container flex-column">
+      
+      <!-- Riga superiore -->
+      <div class="d-flex w-100 justify-content-between align-items-center flex-wrap">
+        <!-- Logo -->
+        <a class="navbar-brand fw-bold me-3" href="#">ExponoHub</a>
+        
+        <!-- Link centrali -->
+        <div class="d-flex flex-wrap gap-3 justify-content-center">
+          <a class="nav-link" href="index.homepage.html">Homepage</a>
+          <a class="nav-link" href="#">Popolari</a>
+          <a class="nav-link" href="#">Categorie</a>
+          <a class="nav-link" href="#">Preferiti</a>
+        </div>
+
+        <!-- Icone e account -->
+        <div class="d-flex align-items-center gap-3">
+          <a class="nav-link bi bi-plus-circle fs-5" href="index.user.nuovopost.html" title="Nuovo Post"></a>
+          <a class="nav-link bi bi-bell-fill fs-5" href="index.user.notiche.html" title="Notifiche"></a>
+          <div class="dropdown">
+            <button class="btn btn-link nav-link dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+              Account
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+              <li><a class="dropdown-item bi bi-person" href="utente.html"> Utente</a></li>
+              <li><a class="dropdown-item bi bi-gear" href="impostazioni.html"> Impostazioni</a></li>
+              <li><a class="dropdown-item bi bi-person-lock" href="privacy.html"> Privacy</a></li>
+              <li><a class="dropdown-item bi bi-box-arrow-right" href="logout.html"> Logout</a></li>
+            </ul>
+          </div>
         </div>
       </div>
+
+      <!-- Riga inferiore: barra di ricerca -->
+      <div class="w-100 mt-3">
+        <form class="d-flex justify-content-center">
+          <input type="search" class="form-control w-50" placeholder="Cerca" aria-label="Search">
+        </form>
+      </div>
+
     </div>
   </nav>
-
-
 
   <div class="post-feed">
 
     <div class="post-card">
       <div class="mb-2">
-        <class="username">Mario Rossi</a>
+        <span class="username">Mario Rossi</span>
       </div>
       <div class="row">
         <div class="col-md-5">
@@ -106,10 +80,9 @@
       </div>
     </div>
 
-  
     <div class="post-card">
       <div class="mb-2">
-        <a href="#" class="username">Luca Rossi</a>
+        <span class="username">Luca Rossi</span>
       </div>
       <div class="row">
         <div class="col-md-5">
@@ -125,11 +98,8 @@
       </div>
     </div>
 
- 
-    
   </div>
 
-  
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
