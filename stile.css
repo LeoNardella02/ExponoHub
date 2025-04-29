@@ -1,0 +1,107 @@
+body {
+    background-color: #9dbcdb !important;
+    margin: 0;
+}
+
+.navbar {
+    position: relative;
+    top: 0;
+    z-index: 000;
+    display: flex;
+    justify-content: space-between; /* Separare i gruppi di elementi */
+    align-items: center; /* Allinea gli elementi verticalmente */
+    padding: 0.5rem 2rem;
+
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 0;
+}
+
+.nav-center {
+    display: flex;
+    justify-content: center; /* Centra i link principali */
+    flex-grow: 1; /* La nav-center occupa tutto lo spazio disponibile */
+    gap: 20px; /* Spazio tra i link */
+
+}
+
+.nav-right {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Spazio tra gli elementi a destra */
+}
+
+.d-flex {
+    display: flex;
+    gap: 15px; /* Distanza tra gli ultimi link */
+    align-items: center; /* Allineamento verticale per gli elementi */
+    justify-content: flex-end; /* Posiziona gli ultimi 3 link all'estrema destra */
+}
+
+.nav-link {
+    margin-right: 20px;
+    display: inline-block;
+    text-align: center;
+}
+
+.nav-link:last-child {
+    margin-right: 0;
+}
+
+.search-bar {
+    max-width: 1000px;      /* Come la navbar */
+    width: 100%;
+    margin: 0 auto;         /* Centra orizzontalmente */
+    padding: 0 2rem;        /* Coerente con padding della navbar */
+}
+
+/* Media Query per mobile */
+@media (max-width: 768px) {
+    .nav-center {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .d-flex {
+        justify-content: center; /* Allega gli ultimi 3 link al centro su mobile */
+        gap: 10px;
+    }
+    .search-bar form {
+        width: 100% !important;
+    }
+    .search-bar input {
+        width: 100% !important; /* Occupa tutto lo spazio */
+    }
+}
+
+.post-feed {
+    max-width:1000PX;
+    margin:auto;
+    padding: 50px 35px;
+}
+
+.post-card {
+    background-color: #80a5ca;
+    border-radius: 10%;
+    padding: 30px;
+    box-shadow: 0 0 0 rgba(193, 85, 85, 0.1);
+    margin-bottom: 30px;
+}
+
+.post-image {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.username {
+    image-rendering: auto;
+    font-weight: bold;
+    color: #080808;
+    cursor: pointer;
+}
+

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User</title>
+    <link rel="stylesheet"  href="stile.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm px-4">
+        <div class="container flex-column">
+
+            <!-- Prima riga: Logo, link e pulsanti -->
+            <div class="d-flex w-100 align-items-center"> 
+                
+                <a class="navbar-brand fw-bold" href="#">ExponoHub</a>
+
+                <!--Elementi al centro-->
+                <div class="nav-center">
+                    <a class="nav-link" href="index.homepage.html">Homepage</a>
+                    <a class="nav-link" href="#">Popolari</a>
+                    <a class="nav-link" href="#">Categorie</a>  
+                    <a class="nav-link" href="#">Preferiti</a>
+                </div>
+                
+                <!--Elementi a destra-->
+                <div class="nav-right">
+                    <a class="nav-link bi bi-plus-circle" href="index.user.nuovopost.html"></a>
+                    <a class="nav-link bi bi-bell-fill" href="index.user.notiche.html"></a>
+                    <div class="dropdown">
+                    <button class="btn btn-link nav-link dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                        Account
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <li><a class="dropdown-item bi bi-person" href="utente.html"> Utente</a></li>
+                        <li><a class="dropdown-item bi bi-gear" href="impostazioni.html"> Impostazioni</a></li>
+                        <li><a class="dropdown-item bi bi-person-lock" href="privacy.html"> Privacy</a></li>
+                        <li><a class="dropdown-item bi bi-box-arrow-right" href="logout.html"> Logout</a></li>
+                    </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Seconda riga: Barra di ricerca  -->
+            <div class="search-bar w-100 mt-2">  
+                <form class="d-flex justify-content-center">
+                    <input  
+                        type="search" 
+                        class="form-control" 
+                        placeholder="Cerca" 
+                        aria-label="Search"
+                    > 
+                </form>
+            </div>
+        
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+
+        <!-- Nome Utente -->
+        <h2 class="username text-center mb-3">Mario Rossi</h2>
+      
+        <!-- Descrizione -->
+        <p class="text-center mb-5" style="max-width: 600px; margin: 0 auto;">
+          Appassionato di fotografia e viaggi. Condivido scatti e momenti da tutto il mondo.
+        </p>
+
+        <!-- Dropdown per filtrare i post -->
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h3 class="mb-0">Post</h3>
+            <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="filterDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                Filtra per
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="filterDropdown">
+                <li><a class="dropdown-item" href="#">Tutti</a></li>
+                <li><a class="dropdown-item" href="#">Popolari</a></li>
+                <li><a class="dropdown-item" href="#">Recenti</a></li>
+                <li><a class="dropdown-item" href="#">Mi Piace</a></li>
+            </ul>
+            </div>
+        </div>
+
+        <!-- Post dell'utente -->
+        <div class="post-feed">
+            <div class="row g-4">
+        
+            <!-- Post 1 -->
+            <div class="col-6 col-md-3">
+                <div class="post-card p-0 overflow-hidden">
+                <div class="ratio ratio-1x1">
+                    <img src="https://images.pexels.com/photos/1231234/pexels-photo-1231234.jpeg" class="post-image w-100 h-100 object-fit-cover" alt="Post 1">
+                </div>
+                <div class="p-2 d-flex justify-content-between">
+                    <span><i class="bi bi-eye"></i> 1200</span>
+                    <span><i class="bi bi-heart-fill"></i> 300</span>
+                </div>
+                </div>
+            </div>
+        
+            <!-- Post 2 -->
+            <div class="col-6 col-md-3">
+                <div class="post-card p-0 overflow-hidden">
+                <div class="ratio ratio-1x1">
+                    <img src="https://images.pexels.com/photos/4559943/pexels-photo-4559943.jpeg" class="post-image w-100 h-100 object-fit-cover" alt="Post 2">
+                </div>
+                <div class="p-2 d-flex justify-content-between">
+                    <span><i class="bi bi-eye"></i> 980</span>
+                    <span><i class="bi bi-heart-fill"></i> 150</span>
+                </div>
+                </div>
+            </div>
+        
+            <!-- Post 3 -->
+            <div class="col-6 col-md-3">
+                <div class="post-card p-0 overflow-hidden">
+                <div class="ratio ratio-1x1">
+                    <img src="https://images.pexels.com/photos/4110102/pexels-photo-4110102.jpeg" class="post-image w-100 h-100 object-fit-cover" alt="Post 3">
+                </div>
+                <div class="p-2 d-flex justify-content-between">
+                    <span><i class="bi bi-eye"></i> 2150</span>
+                    <span><i class="bi bi-heart-fill"></i> 510</span>
+                </div>
+                </div>
+            </div>
+        
+            <!-- Post 4 -->
+            <div class="col-6 col-md-3">
+                <div class="post-card p-0 overflow-hidden">
+                <div class="ratio ratio-1x1">
+                    <img src="https://images.pexels.com/photos/2305077/pexels-photo-2305077.jpeg" class="post-image w-100 h-100 object-fit-cover" alt="Post 4">
+                </div>
+                <div class="p-2 d-flex justify-content-between">
+                    <span><i class="bi bi-eye"></i> 650</span>
+                    <span><i class="bi bi-heart-fill"></i> 85</span>
+                </div>
+                </div>
+            </div>
+        
+        </div>
+    </div>     
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
