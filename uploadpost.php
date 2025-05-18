@@ -89,57 +89,6 @@ if (isset($_FILES['files'])) {
 }
 
 
-/*
-///////PROVA INVIO MAIL////
-
-
-//Invio mail 
-
-require 'phpmailer/src/PHPMailer.php';
-require 'phpmailer/src/SMTP.php';
-require 'phpmailer/src/Exception.php';
-
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
-
-$mail = new PHPMailer(true);
-
-try {
-    // Configura PHPMailer
-    $mail->isSMTP();
-    $mail->Host       = 'smtp.gmail.com';
-    $mail->SMTPAuth   = true;
-    $mail->Username   = 'leonard.nardella@gmail.com';
-    $mail->Password   = 'uvhtqjcanezsuapo'; 
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
-    $mail->Port       = 465;
-
-    // Mittente e destinatario
-    $mail->setFrom('leonard.nardella@gmail.com', 'ExponoHub');
-    $mail->addAddress('leonardonardella002@gmail.com');
-
-    // Contenuto email
-    $mail->isHTML(true);
-    $mail->Subject = 'Nuovo post pubblicato: ' . $titolo;
-    $linkPost = "http://localhost/ExponoHub/postview.php?id=$post_id";
-    $mail->Body = "
-        <h3>È stato pubblicato un nuovo post:</h3>
-        <p><strong>Titolo:</strong> " . htmlspecialchars($titolo) . "</p>
-        <p><strong>Descrizione:</strong><br>" . $descrizione . "</p>
-        <p><a href='$linkPost'>Clicca qui per visualizzarlo</a></p>
-    ";
-
-    $mail->send();
-} catch (Exception $e) {
-    error_log("Errore invio email: " . $mail->ErrorInfo);
-}
-
-
-///////////////////////////////////////////////////
-
-*/
-
-
 $conn->close();
 header("Location: homepage.php");
 exit;
