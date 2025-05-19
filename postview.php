@@ -42,18 +42,6 @@ $fileStmt->execute();
 $fileResult = $fileStmt->get_result();
 $files = $fileResult->fetch_all(MYSQLI_ASSOC);
 
-// Mi piace
-$likeStmt = $conn->prepare("SELECT 1 FROM mipiace WHERE user_id = ? AND post_id = ?");
-$likeStmt->bind_param("ii", $user_id, $id);
-$likeStmt->execute();
-$hasLiked = $likeStmt->get_result()->num_rows > 0;
-
-// Conteggio totale dei like
-$countStmt = $conn->prepare("SELECT COUNT(*) as tot FROM mipiace WHERE post_id = ?");
-$countStmt->bind_param("i", $id);
-$countStmt->execute();
-$countResult = $countStmt->get_result();
-$likeCount = $countResult->fetch_assoc()['tot'];
 ?>
 
 <!DOCTYPE html>
@@ -68,28 +56,7 @@ $likeCount = $countResult->fetch_assoc()['tot'];
     <link href="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.snow.css" rel="stylesheet" />
 </head>
 
-<!-- Script per like -->
-<script>
-    function toggleLike(postId) {
-        const btn = document.getElementById("likeButton");
 
-        fetch("like.php", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/x-www-form-urlencoded"
-            },
-            body: "post_id=" + postId
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                btn.classList.toggle("active");
-            } else {
-                alert(data.message);
-            }
-        });
-    }
-</script>
 
 <body>
     <?php include 'navbar.php'; ?>
@@ -132,15 +99,6 @@ $likeCount = $countResult->fetch_assoc()['tot'];
             </ul>
         <?php endif; ?>
 
-        <div class="like-section mb-4">
-            <button 
-                id="likeButton" 
-                class="btn btn-outline-danger <?= $hasLiked ? 'active' : '' ?>" 
-                onclick="toggleLike(<?= $id ?>)"
-            >
-                <i class="bi bi-heart-fill"></i> Mi Piace
-            </button>
-        </div>
 
     </div>
 

@@ -83,8 +83,6 @@
         </form>
     </div>
 
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.js"></script>
     <script>
         
@@ -191,18 +189,17 @@
             const extraHeightPerFile = 25;
             const newHeight = baseHeight + (files.length * extraHeightPerFile);
 
-            uploadBox.style.height = `${newHeight}px`;
+            //uploadBox.style.height = `${newHeight}px`; ///////////da controllare
         }
 
         resetBtn.onclick = function () {
             fileInput.value = "";             // Resetta i file
             listFile.innerHTML = "";          // Pulisce la lista
             label.style.display = "block";    // Mostra di nuovo il testo
-            //uploadBox.style.height = document.getElementById("scrittalabel").height; // Reset altezza originale
         };
 
 
-        //Evita l'invio dei dati al server alla pressione del tasto "Enter"
+        //Evita l'invio dei dati al server alla pressione del tasto "enter"
         document.getElementById("formpost").addEventListener("keydown", function (e) {
             if (e.key === "Enter" && e.target.tagName === "INPUT" && e.target.type === "text") {
             e.preventDefault(); // blocca l'invio

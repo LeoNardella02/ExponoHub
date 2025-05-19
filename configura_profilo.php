@@ -61,7 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $immagine_nome = $row_attuale['immagine_profilo'];
             }
 
-            $query = $conn->prepare("UPDATE utenti SET username = ?, bio = ?, immagine_profilo = ? WHERE id = ?");
+            $query = $conn->prepare("UPDATE utenti SET username = ?, biografia = ?, immagine_profilo = ? WHERE id = ?");
             $query->bind_param("sssi", $username, $bio, $immagine_nome, $id_utente);
             if ($query->execute()) {
                 header("Location: homepage.php");

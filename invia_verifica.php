@@ -3,9 +3,9 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require 'PHPMailer/PHPMailer-master/src/Exception.php';
-require 'PHPMailer/PHPMailer-master/src/PHPMailer.php';
-require 'PHPMailer/PHPMailer-master/src/SMTP.php';
+require 'PHPMailer/src/Exception.php';
+require 'PHPMailer/src/PHPMailer.php';
+require 'PHPMailer/src/SMTP.php';
 
 function inviaEmailVerifica($email, $token) {
     $mail = new PHPMailer(true);
@@ -23,19 +23,19 @@ function inviaEmailVerifica($email, $token) {
         $mail->isSMTP();
         $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
-        $mail->Username   = 
-        $mail->Password   = 
-        $mail->SMTPSecure = 'tls';
-        $mail->Port       = 587;
+        $mail->Username   = 'exponohub@gmail.com';   
+        $mail->Password   = '';  
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+        $mail->Port       = 465;
 
         // Mittente e destinatario
-        $mail->setFrom('tersigni.2076642@studenti.uniroma1.it', 'ExpoonHub');
+        $mail->setFrom('exponohub@gmail.com', 'ExponoHub');
         $mail->addAddress($email);
 
         // Contenuto dell'email
         $mail->isHTML(true);
-        $mail->Subject = 'Conferma la tua email - ExpoonHub';
-        $link = "http://localhost/ExponoHub/verifica_email.php?email=" . urlencode($email) . "&token=" . urlencode($token);
+        $mail->Subject = 'Conferma la tua email - ExponoHub';
+        $link = "http://localhost:3000/verifica_email.php?email=" . urlencode($email) . "&token=" . urlencode($token);
         $mail->Body    = "Clicca sul seguente link per verificare il tuo account:<br><a href='$link'>$link</a>";
 
         $mail->send();

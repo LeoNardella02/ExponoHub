@@ -1,29 +1,37 @@
 /*Navbar*/
 body {
-    background-color: #9dbcdb !important;
-    margin: 0;
+  background-color: #9dbcdb !important;
+
 }
 
-.navbar {
-    position: relative;
-    top: 0;
-    z-index: 000;
-    display: flex;
-    justify-content: space-between; /* Separare i gruppi di elementi */
-    align-items: center; /* Allinea gli elementi verticalmente */
-    padding: 0.5rem 2rem;
+.custom-navbar {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
 
+.navbar-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.navbar-top {
+  display: flex;
+  width: 100%;
+  gap: 15px; /* Distanza tra gli ultimi link */
+  align-items: center; /* Allineamento verticale per gli elementi */
+  justify-content: flex-end; /* Posiziona gli ultimi 3 link all'estrema destra */
+  margin-bottom: 15px;
 }
 
 .nome{
   font-weight: bold;
-  font-size: large;
-}
-
-.navbar .container {
-    display: flex;
-    justify-content: flex-start;
-    padding-left: 0;
+  font-size: 20px;
+  margin-left: 50px;
+  margin-right: 30px;
 }
 
 .nav-center {
@@ -31,73 +39,48 @@ body {
   justify-content: center;
   flex-grow: 1;
   gap: 20px;
+  
 }
-
 
 .nav-right {
-    margin-left: auto;
-    display: flex;
-    align-items: center;
-    gap: 15px; /* Spazio tra gli elementi a destra */
-}
-
-.div {
-    display: flex;
-    width: 100%;
-    gap: 15px; /* Distanza tra gli ultimi link */
-    align-items: center; /* Allineamento verticale per gli elementi */
-    justify-content: flex-end; /* Posiziona gli ultimi 3 link all'estrema destra */
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Spazio tra gli elementi a destra */
 }
 
 .nav-link {
-    margin-right: 20px;
-    display: inline-block;
-    text-align: center;
-}
-
-.nav-link:last-child {
-    margin-right: 0;
+  margin-right: 20px;
+  display: inline-block;
+  text-align: center;
 }
 
 .search-bar {
-    max-width: 1000px;      /* Come la navbar */
-    width: 100%;
-    margin: 0 auto;         /* Centra orizzontalmente */
-    padding: 0 2rem;        /* Coerente con padding della navbar */
-    margin-top: 10px;
+  max-width: 1000px;      /* Come la navbar */
+  width: 100%;
+  margin: 0 auto;         /* Centra orizzontalmente */
+  padding: 0 2rem;        /* Coerente con padding della navbar */
 }
 
 /* Media Query per mobile */
 @media (max-width: 768px) {
-  .navbar .container {
+  .navbar-top {
     flex-direction: column;
     align-items: flex-start;
+    gap: 10px;
   }
 
-  .nav-center {
+  .nav-center, .nav-right {
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
-  }
-
-  .nav-right {
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    width: 100%;
-    margin-top: 10px;
   }
 
   .nav-link {
-    margin-right: 0;
     padding: 8px 0;
   }
 
   .search-bar {
-    width: 100%;
-    padding: 0 1rem;
-  }
-
-  .search-bar input {
     width: 100%;
   }
 }

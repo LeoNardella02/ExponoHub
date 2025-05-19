@@ -1,8 +1,8 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm px-4">
-    <div class="container flex-column">
+<nav class="custom-navbar">
+    <div class="navbar-container">
 
         <!-- Prima riga: Logo, link e pulsanti -->
-        <div class="div">
+        <div class="navbar-top">
             
             <!-- Nome sito -->
             <div class="nome">ExponoHub</div>
@@ -11,7 +11,7 @@
             <div class="nav-center">
                 <a class="nav-link" href="homepage.php">Homepage</a>
                 <a class="nav-link" href="#">Popolari</a>
-                <a class="nav-link" href="#">Categorie</a>  
+                <a class="nav-link" href="#">Profilo</a>  
                 <a class="nav-link" href="#">Preferiti</a>
             </div>
             
@@ -48,3 +48,4 @@
     
     </div>
 </nav>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
