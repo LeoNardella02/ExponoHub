@@ -8,7 +8,6 @@ if (!isset($_SESSION['email'])) {
     exit();
 }
 
-// Recupera ID utente e/o username dalla sessione
 $email = $_SESSION['email'];
 
 $query = $conn->prepare("SELECT id, username FROM utenti WHERE email = ?");
@@ -16,10 +15,10 @@ $query->bind_param("s", $email);
 $query->execute();
 $result = $query->get_result();
 
+// Recupera ID utente
 if ($result->num_rows === 1) {
     $utente = $result->fetch_assoc();
     $user_id = $utente['id'];
-    $username = $utente['username']; // opzionale se vuoi salvarlo anche
 } else {
     die("Utente non trovato.");
 }
@@ -53,11 +52,10 @@ for ($i = 0; $i < 5; $i++) {
 
     if (isset($_FILES[$inputName]) && $_FILES[$inputName]['error'] === 0) {
         $tmpName = $_FILES[$inputName]['tmp_name'];
-        $originalName = basename($_FILES[$inputName]['name']);
-        $safeName = uniqid() . "_" . $originalName;
+        $Name = basename($_FILES[$inputName]['name']);
 
-        $targetPath = $imgDir . $safeName;
-        $relativePath = "immagini/immagini_post/$post_id/$safeName";
+        $targetPath = $imgDir . $Name;
+        $relativePath = "immagini/immagini_post/$post_id/$Name";
 
         if (move_uploaded_file($tmpName, $targetPath)) {
             $sqlImg = "INSERT INTO immagini (post_id, path, data_creazione)
@@ -74,11 +72,10 @@ if (isset($_FILES['files'])) {
 
     for ($i = 0; $i < $fileCount; $i++) {
         $tmpName = $_FILES['files']['tmp_name'][$i];
-        $originalName = basename($_FILES['files']['name'][$i]);
-        $safeName = time() . "_$originalName";
+        $Name = basename($_FILES['files']['name'][$i]);
 
-        $targetPath = $fileDir . $safeName;
-        $relativePath = "file/$post_id/$safeName";
+        $targetPath = $fileDir . $Name;
+        $relativePath = "file/$post_id/$Name";
 
         if (move_uploaded_file($tmpName, $targetPath)) {
             $sqlFile = "INSERT INTO file (post_id, path, data_creazione)

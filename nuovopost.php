@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -78,7 +78,7 @@
             <br>
 
             <button type="submit" id="savebutton">PUBBLICA</button>
-            <button type="button" id="exitbutton" onclick="salvabozza();"> ANNULLA </button>
+            <button type="button" id="exitbutton" onclick="window.location.href='homepage.php'"> ANNULLA </button>
 
         </form>
     </div>

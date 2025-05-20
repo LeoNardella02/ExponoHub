@@ -2,8 +2,8 @@
 <?php
 $host = "localhost";
 $user = "root";
-$password = ""; // di default è vuota su XAMPP
-$database = "Exponohub"; // Assicurati che il nome sia corretto
+$password = ""; // default
+$database = "Exponohub"; // Nome database
 
 $conn = new mysqli($host, $user, $password, $database);
 

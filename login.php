@@ -39,8 +39,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <title>Login - ExpoonHub</title>
+    <title>Login - ExponoHub</title>
     <link rel="stylesheet" href="stile.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
     <div class="registrazione-container">
@@ -66,7 +67,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </div>
 
             <div class="form-group">
-                <button type="button" class="btn-registra btn-spazio" onclick="window.location.href='registrazione.php'">
+                <p style="margin-bottom: 10px;">Non sei registrato?</p>                
+                <button type="button" style="font-size: 10px"class="btn-registra btn-spazio" onclick="window.location.href='registrazione.php'">
                     Registrati
                 </button>
             </div>

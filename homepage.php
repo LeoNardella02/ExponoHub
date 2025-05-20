@@ -10,7 +10,7 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,9 +24,9 @@
     <?php include 'navbar.php'; ?>
 
     <!-- Ordinamento post -->
-    <div class="d-flex justify-content-center align-items-center w-100 mt-3 pe-2">
-        <form method="GET" class="d-flex align-items-center">
-            <select name="order" id="order" class="form-select form-select-sm" onchange="this.form.submit()">
+    <div class="filtra-container">
+        <form method="GET" class="filtra-form">
+            <select name="order" id="order" class="filtra-select" onchange="this.form.submit()">
                 <option disabled <?= !isset($_GET['order']) ? 'selected' : '' ?>>Filtra per</option>
                 <option value="desc" <?= (isset($_GET['order']) && $_GET['order'] === 'desc') ? 'selected' : '' ?>>Più recenti</option>
                 <option value="asc" <?= (isset($_GET['order']) && $_GET['order'] === 'asc') ? 'selected' : '' ?>>Meno recenti</option>

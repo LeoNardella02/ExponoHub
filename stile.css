@@ -1,7 +1,6 @@
 /*Navbar*/
 body {
   background-color: #9dbcdb !important;
-
 }
 
 .custom-navbar {
@@ -21,9 +20,9 @@ body {
 .navbar-top {
   display: flex;
   width: 100%;
-  gap: 15px; /* Distanza tra gli ultimi link */
-  align-items: center; /* Allineamento verticale per gli elementi */
-  justify-content: flex-end; /* Posiziona gli ultimi 3 link all'estrema destra */
+  gap: 15px;                  /* Distanza tra gli ultimi link */
+  align-items: center;        /* Allineamento verticale per gli elementi */
+  justify-content: flex-end;  /* Posiziona gli ultimi 3 link all'estrema destra */
   margin-bottom: 15px;
 }
 
@@ -46,7 +45,7 @@ body {
   margin-right: 20px;
   display: flex;
   align-items: center;
-  gap: 15px; /* Spazio tra gli elementi a destra */
+  gap: 15px;              /* Spazio tra gli elementi a destra */
 }
 
 .nav-link {
@@ -139,7 +138,6 @@ body {
   height: 100px;
   flex: 1 0 calc(50% - 10px); /* 2 per riga su mobile */
   max-width: 150px;
-
   border-radius: 4px;
   background-color: #f9f9f9;
   overflow: hidden;
@@ -171,11 +169,11 @@ body {
 }
 
 .anteprima {
-      display: none;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 10px;
+  display: none;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
 .caricafile{
@@ -183,13 +181,13 @@ body {
   padding: 20px;
   box-sizing: border-box;
   background-color: lightgray;
-  display: flex;          /* Per centrare il contenuto */
+  display: flex;                /* Per centrare il contenuto */
   justify-content: center;
   align-items: center;
-  border: 2px;  /* Bordo tratteggiato per stile dropzone */
-  margin: 20px 0;         /* Margine sopra e sotto */
+  border: 2px;  
+  margin: 20px 0;               /* Margine sopra e sotto */
   cursor: pointer;
-  border: 2px dashed #aaa;
+  border: 2px dashed #aaa;    /* Bordo tratteggiato per stile dropzone */
   border-radius: 8px;
   transition: height 0.3s ease;
 }
@@ -228,6 +226,30 @@ body {
   max-width: 900px;
   margin: 0 auto;
   padding: 20px;
+}
+
+.filtra-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 1rem; 
+    padding-right: 0.5rem; 
+}
+
+.filtra-form {
+    display: flex;
+    align-items: center;
+}
+
+.filtra-select {
+    padding: 0.25rem 0.5rem; 
+    font-size: 0.9rem; 
+    line-height: 1.5;
+    color: black;
+    background-color: white;
+    border: 1px lightgray;
+    border-radius: 0.25rem;
 }
 
 .post {
@@ -444,4 +466,8 @@ body {
     display: block;
     margin: 0 auto;
 }
+
+
+/****************************************/
+
 

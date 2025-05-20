@@ -10,7 +10,7 @@ if (!isset($_SESSION['id_utente'])) {
 }
 
 $errore = "";
-$immagine_nome = "default.png";
+$immagine_nome = "immagini/immagini_utente/default.png";
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $id_utente = $_SESSION['id_utente'];
@@ -77,9 +77,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <title>Configura Profilo - ExpoonHub</title>
+    <title>Configura Profilo - ExponoHub</title>
     <link rel="stylesheet" href="stile.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
     <div class="registrazione-container">

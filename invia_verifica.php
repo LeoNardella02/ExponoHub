@@ -36,7 +36,28 @@ function inviaEmailVerifica($email, $token) {
         $mail->isHTML(true);
         $mail->Subject = 'Conferma la tua email - ExponoHub';
         $link = "http://localhost:3000/verifica_email.php?email=" . urlencode($email) . "&token=" . urlencode($token);
-        $mail->Body    = "Clicca sul seguente link per verificare il tuo account:<br><a href='$link'>$link</a>";
+        $mail->Body = "
+        <div style='background-color: #9dbcdb; font-family: Arial, sans-serif; text-align: center; padding: 20px;'>
+            <h2 style='font-size: 24px; margin-bottom: 20px;'>ExponoHub</h2>
+            
+            <p style='font-size: 16px; margin-bottom: 20px;'>
+                Clicca qui sotto per verificare la tua mail:
+            </p>
+            
+            <a href='$link'
+                style='
+                background-color: lightgray;
+                font-size: 14px;
+                border: none;
+                border-radius: 8px;
+                padding: 10px 20px;
+                text-decoration: none;
+                color: black;
+                display: inline-block
+                '>
+                VERIFICA
+            </a>
+        </div>";
 
         $mail->send();
 

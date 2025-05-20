@@ -18,17 +18,16 @@
             <!--Elementi a destra-->
             <div class="nav-right">
                 <a class="nav-link bi bi-plus-circle" href="nuovopost.php"></a>
-                <a class="nav-link bi bi-bell-fill" href="index.user.notiche.html"></a>
                 <div class="dropdown">
-                <button class="btn btn-link nav-link dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                    Account
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <li><a class="dropdown-item bi bi-person" href="utente.html"> Utente</a></li>
-                    <li><a class="dropdown-item bi bi-gear" href="impostazioni.html"> Impostazioni</a></li>
-                    <li><a class="dropdown-item bi bi-person-lock" href="privacy.html"> Privacy</a></li>
-                    <li><a class="dropdown-item bi bi-box-arrow-right" href="logout.php"> Logout</a></li>
-                </ul>
+                    <button class="btn btn-link nav-link dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                        Account
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <li><a class="dropdown-item bi bi-person" href="utente.html"> Utente</a></li>
+                        <li><a class="dropdown-item bi bi-gear" href="impostazioni.html"> Impostazioni</a></li>
+                        <li><a class="dropdown-item bi bi-person-lock" href="privacy.html"> Privacy</a></li>
+                        <li><a class="dropdown-item bi bi-box-arrow-right" href="logout.php"> Logout</a></li>
+                    </ul>
                 </div>
             </div>
 
