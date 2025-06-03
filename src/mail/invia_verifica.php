@@ -24,7 +24,7 @@ function inviaEmailVerifica($email, $token) {
         $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
         $mail->Username   = 'exponohub@gmail.com';     
-        $mail->Password   = 'xabz hohm wytm ytqa ';         
+        $mail->Password   = '****';         
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
         $mail->Port       = 465;
 
