@@ -1,13 +1,14 @@
-
 <?php
-$host = "localhost";
-$user = "root";
-$password = ""; // default
-$database = "Exponohub"; // Nome database
+    // Connessione al database 
+    $host = "localhost";
+    $user = "root";
+    $password = "";
+    $dbname = "ExponoHub";
 
-$conn = new mysqli($host, $user, $password, $database);
+    $conn = new mysqli($host, $user, $password, $dbname);
 
-if ($conn->connect_error) {
-    die("Connessione fallita: " . $conn->connect_error);
-}
+    // Controlla la connessione
+    if ($conn->connect_error) {
+        die("Connessione fallita: " . $conn->connect_error);
+    }
 ?>
